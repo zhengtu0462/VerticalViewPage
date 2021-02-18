@@ -90,3 +90,4 @@ activity中的代码
         }
     }
 ```
+[![](https://jitpack.io/v/zhengtu0462/VerticalViewPage.svg)](https://jitpack.io/#zhengtu0462/VerticalViewPage)
