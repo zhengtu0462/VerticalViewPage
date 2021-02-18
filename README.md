@@ -1,5 +1,6 @@
 # VerticalViewPager
-竖直滑动的例子，可实现仿抖音上下切换视频
+竖直滑动的例子
+实现仿抖音上下切换视频
 
 在布局中使用VerticalViewPager 代替ViewPage
 ```
