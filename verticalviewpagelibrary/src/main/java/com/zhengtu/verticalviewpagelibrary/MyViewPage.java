@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-package android.support.v4.view;
+//package android.support.v4.view;
+package com.zhengtu.verticalviewpagelibrary;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -36,6 +37,13 @@ import android.support.annotation.Nullable;
 import android.support.annotation.Px;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.AbsSavedState;
+import android.support.v4.view.AccessibilityDelegateCompat;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.PagerTitleStrip;
+import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.WindowInsetsCompat;
 import android.support.v4.view.accessibility.AccessibilityEventCompat;
 import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
 import android.util.AttributeSet;
@@ -500,7 +508,7 @@ public class MyViewPage extends ViewGroup {
      */
     public void setAdapter(@Nullable PagerAdapter adapter) {
         if (mAdapter != null) {
-            mAdapter.setViewPagerObserver(null);
+            //mAdapter.setViewPagerObserver(null);
             mAdapter.startUpdate(this);
             for (int i = 0; i < mItems.size(); i++) {
                 final ItemInfo ii = mItems.get(i);
@@ -521,7 +529,7 @@ public class MyViewPage extends ViewGroup {
             if (mObserver == null) {
                 mObserver = new PagerObserver();
             }
-            mAdapter.setViewPagerObserver(mObserver);
+            mAdapter.registerDataSetObserver(mObserver);
             mPopulatePending = false;
             final boolean wasFirstLayout = mFirstLayout;
             mFirstLayout = true;
@@ -754,7 +762,7 @@ public class MyViewPage extends ViewGroup {
      * but it will cause issues if any of your pages contain a {@link android.view.SurfaceView}
      * and you have not called {@link android.view.SurfaceView#setZOrderOnTop(boolean)} to put that
      * {@link android.view.SurfaceView} above your app content. To disable this behavior, call
-     * {@link #setPageTransformer(boolean, ViewPager.PageTransformer,int)} and pass
+     *  and pass
      * {@link View#LAYER_TYPE_NONE} for {@code pageLayerType}.</p>
      *
      * @param reverseDrawingOrder true if the supplied PageTransformer requires page views

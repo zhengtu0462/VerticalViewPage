@@ -1,6 +1,5 @@
 package com.zhengtu.verticalviewpagelibrary;
 
-import android.support.v4.view.MyViewPage;
 import android.view.View;
 
 

@@ -6,10 +6,10 @@ import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.MyViewPage;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 
+import com.zhengtu.verticalviewpagelibrary.MyViewPage;
 import com.zhengtu.verticalviewpagelibrary.VerticalPageTransformer;
 import com.zhengtu.verticalviewpagelibrary.VerticalViewPager;
 
